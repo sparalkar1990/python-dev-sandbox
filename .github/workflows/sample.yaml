@@ -1,0 +1,12 @@
+name: Sample Workflow
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test echo
+        run: |
+          echo "Inside python-dev-sandbox" >> sample.txt
+      
+      - name: Display contents
+        run: cat sample.txt
